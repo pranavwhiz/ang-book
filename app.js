@@ -19,7 +19,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 app.use(express.static(path.join(__dirname, 'dist')));
 
+app.use('/chats', express.static(path.join(__dirname, 'dist')));
 app.use('/books', express.static(path.join(__dirname, 'dist')));
+app.use('/socket.io', express.static(path.join(__dirname, 'dist')));
 app.use('/book-create', express.static(path.join(__dirname, 'dist')));
 app.use('/book-details/:id', express.static(path.join(__dirname, 'dist')));
 app.use('/book-edit/:id', express.static(path.join(__dirname, 'dist')));
